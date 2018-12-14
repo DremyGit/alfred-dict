@@ -1,0 +1,51 @@
+{
+  "name": "alfred-dict",
+  "description": "Alfred 3 Workflow to search dictionary",
+  "keywords": [
+    "alfred",
+    "workflow",
+    "dict",
+    "dictionary"
+  ],
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Dremy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DremyGit/alfred-dict.git"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "scripts": {
+    "postinstall": "alfy-init",
+    "preuninstall": "alfy-cleanup",
+    "precommit": "npm test",
+    "start": "npm run watch",
+    "build": "babel src --out-dir lib --extensions .ts --ignore src/**/*.test.ts",
+    "watch": "npm run build -- --watch",
+    "test": "jest"
+  },
+  "dependencies": {
+    "alfred-notifier": "^0.2.3",
+    "alfy": "^0.8.0",
+    "node-fetch": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.15",
+    "@types/node-fetch": "^2.1.4",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.10.0",
+    "husky": "^1.2.1",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
+    "typescript": "^3.2.2"
+  }
+}
