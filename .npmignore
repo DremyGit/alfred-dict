@@ -2,3 +2,4 @@
 /src
 /coverage
 *.log
+yarn.lock
