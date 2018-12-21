@@ -19,6 +19,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>8059F22B-952D-494B-97E4-204525F82791</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>CA365716-5BA8-45A0-86E0-57D45BBC116B</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>FEBE1610-68CF-41B2-98F4-3EC2D6FA67D4</key>
 		<array>
 			<dict>
@@ -93,23 +106,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>autopaste</key>
-				<true/>
-				<key>clipboardtext</key>
-				<string>{query}</string>
-				<key>transient</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.clipboard</string>
-			<key>uid</key>
-			<string>CA365716-5BA8-45A0-86E0-57D45BBC116B</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -154,6 +150,70 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<true/>
+				<key>clipboardtext</key>
+				<string>{query}</string>
+				<key>transient</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>CA365716-5BA8-45A0-86E0-57D45BBC116B</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>keyword</key>
+				<string>yd</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<false/>
+				<key>queuedelaymode</key>
+				<integer>2</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>Please Wait...</string>
+				<key>script</key>
+				<string>./node_modules/.bin/run-node index.js youdao "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>test.sh</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string>Search YouDao Dict for '{query}'</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>8059F22B-952D-494B-97E4-204525F82791</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string>Alfred's Script Filter object is extremely powerful, and gives you control over the results displayed in Alfred.
@@ -170,19 +230,26 @@ A new option now exists for Script Filters, "Alfred filters results". This allow
 			<key>ypos</key>
 			<integer>80</integer>
 		</dict>
+		<key>8059F22B-952D-494B-97E4-204525F82791</key>
+		<dict>
+			<key>xpos</key>
+			<integer>180</integer>
+			<key>ypos</key>
+			<integer>340</integer>
+		</dict>
 		<key>CA365716-5BA8-45A0-86E0-57D45BBC116B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>600</integer>
+			<integer>580</integer>
 			<key>ypos</key>
-			<integer>160</integer>
+			<integer>210</integer>
 		</dict>
 		<key>FEBE1610-68CF-41B2-98F4-3EC2D6FA67D4</key>
 		<dict>
 			<key>xpos</key>
 			<integer>180</integer>
 			<key>ypos</key>
-			<integer>220</integer>
+			<integer>210</integer>
 		</dict>
 	</dict>
 	<key>version</key>

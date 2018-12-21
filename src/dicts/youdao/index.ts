@@ -1,20 +1,20 @@
 import { DictInterface } from "../../types";
-import { request, renderTemplate } from '../../utils';
-import { parse } from './parser';
+import { renderTemplate, request } from "../../utils";
+import { parse } from "./parser";
 
-class BingDict implements DictInterface {
-
-  static icon = './bing.png';
+class YouDaoDict implements DictInterface {
+  static icon = './youdao.png';
 
   async search(text: string) {
     const searchUrl = renderTemplate(
-      'https://cn.bing.com/dict/search?mkt=zh-cn&q={{ query }}',
+      'http://dict.youdao.com/w/{{ query }}/#keyfrom=dict2.top',
       { query: encodeURIComponent(text) }
-    );
+    )
     const html = await request(searchUrl, {})
       .then(res => res.text());
+
     return parse(html);
   }
 }
 
-export default BingDict;
+export default YouDaoDict;

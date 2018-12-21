@@ -23,7 +23,12 @@ $ yarn global add alfred-dict
 
 ### Dictionary source
 
-Currently we use the [Chinese Bing dictionary](https://cn.bing.com/dict) as the source of data for the search (and only support Chinese-English and English-Chinese translation for the time being).
+This workflow supports source from:
+
+* [Chinese Bing dictionary](https://cn.bing.com/dict): `bing ...`
+* [Youdao dictionary](http://dict.youdao.com/): `yd ...`
+
+Currently we use the [Chinese Bing dictionary](https://cn.bing.com/dict) as the default source of data for the search (and only support Chinese-English and English-Chinese translation for the time being).
 
 In the future, we will provide more dictionary sources and support mutual translation of more languages.
 

@@ -7,7 +7,6 @@
     "dict",
     "dictionary"
   ],
-  "version": "1.0.0",
   "main": "index.js",
   "author": "Dremy",
   "license": "MIT",
@@ -25,11 +24,14 @@
     "start": "npm run watch",
     "build": "babel src --out-dir lib --extensions .ts --ignore src/**/*.test.ts",
     "watch": "npm run build -- --watch",
-    "test": "jest"
+    "test": "jest",
+    "coverage": "npm run test -- --coverage && open ./coverage/lcov-report/index.html"
   },
   "dependencies": {
     "alfred-notifier": "^0.2.3",
     "alfy": "^0.8.0",
+    "cheerio": "^1.0.0-rc.2",
+    "isomorphic-fetch": "^2.2.1",
     "node-fetch": "^2.3.0"
   },
   "devDependencies": {
@@ -38,6 +40,8 @@
     "@babel/plugin-proposal-class-properties": "^7.2.1",
     "@babel/preset-env": "^7.2.0",
     "@babel/preset-typescript": "^7.1.0",
+    "@types/cheerio": "^0.22.10",
+    "@types/es6-shim": "^0.31.39",
     "@types/jest": "^23.3.10",
     "@types/node": "^10.12.15",
     "@types/node-fetch": "^2.1.4",
@@ -45,6 +49,7 @@
     "eslint": "^5.10.0",
     "husky": "^1.2.1",
     "jest": "^23.6.0",
+    "jest-fetch-mock": "^2.1.0",
     "ts-jest": "^23.10.5",
     "typescript": "^3.2.2"
   }

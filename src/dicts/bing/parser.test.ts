@@ -1,9 +1,13 @@
-import { parsePhrase } from './parser';
+import { parse } from './parser';
 
 describe('bing dict parser', () => {
-  describe('parsePhrase', () => {
+  describe('parse', () => {
+    it('parse empty', () => {
+      expect(parse('<meta name="description" content="this is empty" />'))
+        .toHaveLength(0);
+    })
     it('parse English', () => {
-      expect(parsePhrase('必应词典为您提供好的释义，拼音[hǎo] [hào]，adj. good; nice; fine; kind； v. love; like; be fond of; be liable to； n. a surname； adv. so as to; so that； 网络释义： OK; well; all right； '))
+      expect(parse('<meta name="description" content="必应词典为您提供好的释义，拼音[hǎo] [hào]，adj. good; nice; fine; kind； v. love; like; be fond of; be liable to； n. a surname； adv. so as to; so that； 网络释义： OK; well; all right； " />'))
         .toEqual([
           { type: 'adj', value: 'good' },
           { type: 'adj', value: 'nice' },
@@ -23,7 +27,7 @@ describe('bing dict parser', () => {
     })
 
     it('parse Chinese', () => {
-      expect(parsePhrase(`必应词典为您提供OK的释义，美[oʊ'keɪ]，英[.əʊ'keɪ]，adj. 安然无恙；平安；快活；可以； int. 对；好；行；（用以引起注意或引入话题）好了； n. 允许；准许；同意； v. 正式批准；同意； 网络释义： 确定；好的(Okay)；好吧； `))
+      expect(parse(`<meta name="description" content="必应词典为您提供OK的释义，美[oʊ'keɪ]，英[.əʊ'keɪ]，adj. 安然无恙；平安；快活；可以； int. 对；好；行；（用以引起注意或引入话题）好了； n. 允许；准许；同意； v. 正式批准；同意； 网络释义： 确定；好的(Okay)；好吧； " />`))
         .toEqual([
           { type: 'adj', value: '安然无恙' },
           { type: 'adj', value: '平安' },

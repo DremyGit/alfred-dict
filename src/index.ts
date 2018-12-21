@@ -1,6 +1,7 @@
 import alfy from 'alfy';
 import alfredNotifier from 'alfred-notifier';
 import BingDict from './dicts/bing';
+import YouDaoDict from './dicts/youdao';
 import { DictConstructor } from './types';
 
 alfredNotifier();
@@ -40,6 +41,10 @@ async function searchBy(Dict: DictConstructor) {
       case 'dict':
       case 'bing':
         await searchBy(BingDict);
+        break;
+
+      case 'youdao':
+        await searchBy(YouDaoDict);
         break;
 
       default:
